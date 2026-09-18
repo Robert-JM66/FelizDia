@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feliz día de las flores amarillas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main class="todo">
+  <!-- ============ LADO IZQUIERDO: EL RAMO ============ -->
+  <section class="escena">
+    <div class="cielo" id="cielo" aria-hidden="true"></div>
+
+    <header class="saludo">
+      <h1>Feliz día de las flores amarillas</h1>
+      <p>Ten tu ramo, <span id="nombre-eco">bonita</span></p>
+      <p class="pie">21 de septiembre · Nunca seras espectadora</p>
+    </header>
+
+    <div class="ramo" id="ramo" aria-label="Ramo de girasoles animado">
+      <div class="resplandor" aria-hidden="true"></div>
+
+      <div class="grupo-love" aria-label="Love">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <linearGradient id="corazonLove" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ff7baa"/>
+              <stop offset="100%" stop-color="#d93470"/>
+            </linearGradient>
+          </defs>
+          <path d="M50 88 C40 79 12 61 12 37 C12 24 21 16 33 16 C41 16 47 20 50 27 C53 20 59 16 67 16 C79 16 88 24 88 37 C88 61 60 79 50 88 Z" fill="url(#corazonLove)" stroke="#ffe4a3" stroke-width="2"/>
+          <path d="M29 28 C23 32 21 39 23 44" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+        </svg>
+        <span>LOVE</span>
+      </div>
+
+      <svg class="envoltura" viewBox="0 0 400 270" aria-hidden="true">
+        <defs>
+          <linearGradient id="papel1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#FFF5CF" stop-opacity=".82"/>
+            <stop offset="100%" stop-color="#D4A83E" stop-opacity=".95"/>
+          </linearGradient>
+          <linearGradient id="papel2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#FFF9E7" stop-opacity=".85"/>
+            <stop offset="100%" stop-color="#B88624" stop-opacity=".9"/>
+          </linearGradient>
+        </defs>
+        <path d="M22 4 L200 262 L186 -30 Z" fill="url(#papel2)"/>
+        <path d="M378 4 L200 262 L214 -30 Z" fill="url(#papel2)"/>
+        <path d="M74 34 L326 34 L200 266 Z" fill="url(#papel1)"/>
+        <path d="M128 60 L272 60 L200 196 Z" fill="#FFF8D9" opacity=".22"/>
+        <path d="M150 150 q50 22 100 0" fill="none" stroke="#FFF0B5" stroke-opacity=".7" stroke-width="7" stroke-linecap="round"/>
+        <path d="M200 174 C170 148 132 168 151 192 C166 211 190 193 200 181 C210 193 234 211 249 192 C268 168 230 148 200 174 Z" fill="#F7D56A" stroke="#B88624" stroke-width="3"/>
+        <circle cx="200" cy="179" r="14" fill="#D4A83E" stroke="#FFF0B5" stroke-width="3"/>
+        <path d="M190 190 C171 224 158 246 139 264 C168 253 190 229 198 191 Z" fill="#EBC85A"/>
+        <path d="M210 190 C229 224 242 246 261 264 C232 253 210 229 202 191 Z" fill="#EBC85A"/>
+      </svg>
+    </div>
+
+    <button class="boton-mensajes" id="abrir-mensajes" type="button" aria-haspopup="dialog">
+      DEDICATORIAS
+    </button>
+  </section>
+
+</main>
+
+<div class="modal-mensajes" id="modal-mensajes" role="dialog" aria-modal="true" aria-labelledby="titulo-modal" hidden>
+  <section class="modal-contenido">
+    <button class="cerrar-modal" id="cerrar-mensajes" type="button" aria-label="Cerrar mensajes">X</button>
+    <h2 id="titulo-modal">Una dedicatoria para ti</h2>
+    <p>Elige el tipo de mensaje que quieres compartir.</p>
+    <div class="tipo-mensaje" role="group" aria-label="Tipo de dedicatoria">
+      <button class="activo" type="button" data-tipo="amor">Amor</button>
+      <button type="button" data-tipo="amistad">Amistad</button>
+    </div>
+    <p class="texto-dedicatoria" id="texto-dedicatoria" aria-live="polite"></p>
+    <button class="otro-mensaje" id="otro-mensaje" type="button">Ver otro mensaje</button>
+  </section>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
